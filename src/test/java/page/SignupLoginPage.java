@@ -15,6 +15,27 @@ public class SignupLoginPage extends InteracaoWeb {
     @FindBy(css = "[data-qa='signup-button']")
     private WebElement cadastrar;
 
+    @FindBy(xpath = "(//div/h2)[1]")
+    private WebElement textoDeLOginVisivel;
+
+    @FindBy(xpath = "(//input[@type='email'])[1]")
+    private WebElement emailLogin;
+
+    @FindBy(css = "[data-qa='login-password']")
+    private WebElement senha;
+
+    @FindBy(css = "[data-qa='login-button']")
+    private WebElement botaoLogin;
+
+    @FindBy(xpath = "(//form/p)[1]")
+    private WebElement textoErro;
+
+    @FindBy(css = "[href='/logout']")
+    private WebElement botaoSair;
+
+    @FindBy(xpath = "(//form/p)[1]")
+    private WebElement emailExixtente;
+
     public void preenchoNomeEEmail(String name, String textoemail) {
         escrever(nome, name);
         escrever(email, textoemail);
@@ -22,5 +43,40 @@ public class SignupLoginPage extends InteracaoWeb {
 
     public void clicoEmMeCadastrar() {
         clicarbotao(cadastrar);
+    }
+
+    public String verificoSeTextoDeLoginEstaVisivel() {
+        return textoDeLOginVisivel.getText().trim();
+    }
+
+    public void preenchoEmailESenhaIncorretos(String texto) {
+        escrever(emailLogin, texto);
+        escrever(senha, "12345678");
+
+    }
+
+    public void clicoNoBotaoLogin() {
+        clicarbotao(botaoLogin);
+    }
+
+    public String verificoQueOErroComTexto() {
+        return textoErro.getText().trim();
+    }
+
+    public void preenchoEmailESenhaCorretos(String texto) {
+        escrever(emailLogin, texto);
+        escrever(senha, "12345678");
+    }
+
+    public void clicoNoBotaoSair() {
+        clicarbotao(botaoSair);
+    }
+
+    public String verificoQueFuiReedirecionadoPraPaginaDeLogin() {
+        return textoDeLOginVisivel.getText().trim();
+    }
+    public String verificoComTextoUsuarioExistente() {
+        return emailExixtente.getText().trim();
+
     }
 }

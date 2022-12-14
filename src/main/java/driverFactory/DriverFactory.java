@@ -4,7 +4,10 @@ import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.sql.Array;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
@@ -16,7 +19,9 @@ public class DriverFactory {
 
     public static void iniciarDriver() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }

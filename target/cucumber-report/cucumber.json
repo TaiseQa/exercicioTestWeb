@@ -1,13 +1,13 @@
 [
   {
-    "line": 3,
+    "line": 4,
     "elements": [
       {
-        "start_timestamp": "2022-12-13T20:05:43.713Z",
+        "start_timestamp": "2022-12-14T20:50:15.069Z",
         "before": [
           {
             "result": {
-              "duration": 2121000000,
+              "duration": 2302000000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 7,
-        "name": "criar login e excluir login",
+        "line": 96,
+        "name": "verificar produto e detalhes do produto",
         "description": "",
-        "id": "criar-login-com-sucesso;criar-login-e-excluir-login",
+        "id": "criar-login-com-sucesso;verificar-produto-e-detalhes-do-produto",
         "after": [
           {
             "result": {
-              "duration": 682000000,
+              "duration": 656000000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 4089000000,
+              "duration": 3610000000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 97,
             "name": "que acesso o navegador \"https://automationexercise.com\"",
             "match": {
               "arguments": [
@@ -53,10 +53,10 @@
           },
           {
             "result": {
-              "duration": 42000000,
+              "duration": 56000000,
               "status": "passed"
             },
-            "line": 9,
+            "line": 98,
             "name": "verifico que a pagina esta visivel",
             "match": {
               "location": "steps.HomeSteps.verificoQueAPaginaEstaVisivel()"
@@ -65,404 +65,83 @@
           },
           {
             "result": {
-              "duration": 2161000000,
+              "duration": 7883000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "clico em me inscrever",
+            "line": 99,
+            "name": "clico em produtos",
             "match": {
-              "location": "steps.HomeSteps.clicoEmMeInscrever()"
+              "location": "steps.ProdutosSteps.clicoEmProdutos()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 525000000,
+              "duration": 67000000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "preencho nome e email \"Taise\" \"teste@teste.com.br\"",
+            "line": 100,
+            "name": "verifico texto do produtos \"ALL PRODUCTS\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Taise\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"teste@teste.com.br\"",
-                  "offset": 30
+                  "val": "\"ALL PRODUCTS\"",
+                  "offset": 27
                 }
               ],
-              "location": "steps.SignupLoginSteps.preenchoNomeEEmail(java.lang.String,java.lang.String)"
+              "location": "steps.ProdutosSteps.verificoTextoDoProdutos(java.lang.String)"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 2432000000,
+              "duration": 93000000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "clico em me cadastrar",
+            "line": 101,
+            "name": "verifico que a lista de produtos e visivel",
             "match": {
-              "location": "steps.SignupLoginSteps.clicoEmMeCadastrar()"
+              "location": "steps.ProdutosSteps.verificoQueAListaDeProdutosEVisivel()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 65000000,
+              "duration": 5589000000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "verifco que as informacoes das contas sao visiveis",
+            "line": 102,
+            "name": "clico em detalhes do produto",
             "match": {
-              "location": "steps.AccountInformantionSteps.verificoInformacoes()"
+              "location": "steps.ProdutosSteps.clicoEmDetalhesDoProduto()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 567000000,
+              "duration": 34000000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "preencho title \"Mrs.\"",
+            "line": 103,
+            "name": "verifico nome do produto \"Blue Top\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Mrs.\"",
-                  "offset": 15
+                  "val": "\"Blue Top\"",
+                  "offset": 25
                 }
               ],
-              "location": "steps.AccountInformantionSteps.preenchotitle(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 247000000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "preencho senha",
-            "match": {
-              "location": "steps.AccountInformantionSteps.preenchoSenha()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 406000000,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "preencho date of birth \"12\" \"November\" \"2020\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"12\"",
-                  "offset": 23
-                },
-                {
-                  "val": "\"November\"",
-                  "offset": 28
-                },
-                {
-                  "val": "\"2020\"",
-                  "offset": 39
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoDateOfBirth(java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 122000000,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "seleciono Sign up for our newsletter!",
-            "match": {
-              "location": "steps.AccountInformantionSteps.selecionoSignUpForOurNewsletter()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 112000000,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "seleciono Receive special offers from our partners!",
-            "match": {
-              "location": "steps.AccountInformantionSteps.selecionoReceiveSpecialOffersFromOurPartners()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 186000000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "preencho first name \"Taise\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Taise\"",
-                  "offset": 20
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoFirstName(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 182000000,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "preencho last name \"Almeida\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Almeida\"",
-                  "offset": 19
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoLastName(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 149000000,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "preencho company \"Teste\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Teste\"",
-                  "offset": 17
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoCompany(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 191000000,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "prencho address \"rua dos lagos\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"rua dos lagos\"",
-                  "offset": 16
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.prenchoAddress(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 92000000,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "seleciono country \"India\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"India\"",
-                  "offset": 18
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.selecionoCountry(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 179000000,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "preencho state \"india\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"india\"",
-                  "offset": 15
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoState(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 184000000,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "preencho city \"india\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"india\"",
-                  "offset": 14
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoCity(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 165000000,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "preencho zipcode \"026798000\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"026798000\"",
-                  "offset": 17
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoZipcode(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 159000000,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "preencho moblie number \"1198969585\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"1198969585\"",
-                  "offset": 23
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.preenchoMoblieNumber(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 2655000000,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "clico em create account",
-            "match": {
-              "location": "steps.AccountInformantionSteps.clicoEmCreateAccount()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 44000000,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "valido conta criada com sucesso \"ACCOUNT CREATED!\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"ACCOUNT CREATED!\"",
-                  "offset": 32
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.validoContaCriadaComSucesso(java.lang.String)"
-            },
-            "keyword": "Entao "
-          },
-          {
-            "result": {
-              "duration": 4877000000,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "clico em continuar",
-            "match": {
-              "location": "steps.AccountInformantionSteps.clicoEmContinuar()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 49000000,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "valido nome logado é visivel",
-            "match": {
-              "location": "steps.AccountInformantionSteps.validoNomeLogadoÉVisivel()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 1173000000,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "clico em excluir conta",
-            "match": {
-              "location": "steps.AccountInformantionSteps.clicoEmExcluirConta()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 36000000,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "valido que a conta foi excluida \"ACCOUNT DELETED!\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"ACCOUNT DELETED!\"",
-                  "offset": 32
-                }
-              ],
-              "location": "steps.AccountInformantionSteps.validoQueAContaFoiExcluida(java.lang.String)"
-            },
-            "keyword": "Entao "
-          },
-          {
-            "result": {
-              "duration": 3634000000,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "clico em continuar",
-            "match": {
-              "location": "steps.AccountInformantionSteps.clicoEmContinuar()"
+              "location": "steps.ProdutosSteps.verificoNomeDoProduto(java.lang.String)"
             },
             "keyword": "E "
           }
         ],
         "tags": [
           {
-            "name": "@Teste"
+            "name": "@geral"
+          },
+          {
+            "name": "@ct06"
           }
         ]
       }
@@ -472,6 +151,15 @@
     "id": "criar-login-com-sucesso",
     "keyword": "Funcionalidade",
     "uri": "classpath:features/automationExercices.feature",
-    "tags": []
+    "tags": [
+      {
+        "name": "@geral",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

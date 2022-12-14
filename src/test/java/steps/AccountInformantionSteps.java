@@ -123,4 +123,7 @@ public class AccountInformantionSteps {
     public void validoQueAContaFoiExcluida(String excluida) {
         Assert.assertEquals(excluida, accountInformantionPage.validoQueAContaFoiExcluida());
     }
+
+
+
 }
