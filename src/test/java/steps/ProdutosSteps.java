@@ -2,6 +2,7 @@ package steps;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 import page.ProdutosPage;
@@ -41,10 +42,42 @@ public class ProdutosSteps {
     public void verificoNomeDoProduto(String texto) {
         Assert.assertEquals(texto, produtosPage.verificoNomeDoProduto());
     }
-    @E("verifico preco {string}")
-    public void verificoPreco(String arg0) {
 
+    @E("verifico categoria {string}")
+    public void verificoCategoria(String texto) {
+        Assert.assertEquals(texto, produtosPage.verificoCategoria());
     }
 
 
+    @E("verifico preco {string}")
+    public void verificoPreco(String texto) {
+        Assert.assertEquals(texto,produtosPage.verificopreco());
+    }
+
+    @E("verifico disponibilidade {string}")
+    public void verificoDisponibilidade(String texto) {
+        System.out.println(produtosPage.verificoDisponibilidade());
+    }
+
+    @E("preencho nome do produto na barra de pesquisa{string}")
+    public void preenchoNomeDoProdutoNaBarraDePesquisa(String texto) {
+        produtosPage.preenchoNomeDoProdutoNaBarraDePesquisa(texto);
+    }
+
+    @E("clico em pesquisar")
+    public void clicoEmPesquisar() {
+        produtosPage.clicoEmPesquisar();
+    }
+
+    @E("verifico texto todos os produtos{string}")
+    public void verificoTextoTodosOsProdutos(String texto) {
+        Assert.assertEquals(texto,produtosPage.verificoTextoTodosOsProdutos());
+    }
+
+    @Entao("verifico produto visivel")
+    public void verificoProdutoVisivel() {
+Assert.assertTrue(produtosPage.verificoProdutoVisivel());
+    }
+
 }
+

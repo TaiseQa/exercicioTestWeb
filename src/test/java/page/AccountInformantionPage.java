@@ -156,6 +156,7 @@ public class AccountInformantionPage extends InteracaoWeb {
     }
 
     public void clicoEmCreateAccount() {
+        focarElemento(criarConta);
         clicarbotao(criarConta);
     }
 

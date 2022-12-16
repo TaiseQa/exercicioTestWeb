@@ -3,42 +3,18 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2022-12-14T20:50:15.069Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2302000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "hooks.Hooks.iniciarNavegador()"
-            }
-          }
-        ],
-        "line": 96,
-        "name": "verificar produto e detalhes do produto",
+        "line": 6,
+        "name": "entar na pagina",
         "description": "",
-        "id": "criar-login-com-sucesso;verificar-produto-e-detalhes-do-produto",
-        "after": [
-          {
-            "result": {
-              "duration": 656000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "hooks.Hooks.fecharNavegador()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Cenario",
+        "type": "background",
+        "keyword": "Contexto",
         "steps": [
           {
             "result": {
-              "duration": 3610000000,
+              "duration": 4996000000,
               "status": "passed"
             },
-            "line": 97,
+            "line": 7,
             "name": "que acesso o navegador \"https://automationexercise.com\"",
             "match": {
               "arguments": [
@@ -53,85 +29,593 @@
           },
           {
             "result": {
-              "duration": 56000000,
+              "duration": 38000000,
               "status": "passed"
             },
-            "line": 98,
+            "line": 8,
             "name": "verifico que a pagina esta visivel",
             "match": {
               "location": "steps.HomeSteps.verificoQueAPaginaEstaVisivel()"
             },
             "keyword": "E "
-          },
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-12-16T14:36:54.225Z",
+        "before": [
           {
             "result": {
-              "duration": 7883000000,
+              "duration": 2620000000,
               "status": "passed"
             },
-            "line": 99,
-            "name": "clico em produtos",
             "match": {
-              "location": "steps.ProdutosSteps.clicoEmProdutos()"
+              "location": "hooks.Hooks.iniciarNavegador()"
+            }
+          }
+        ],
+        "line": 148,
+        "name": "fazer pedido regristar durante o checkout",
+        "description": "",
+        "id": "criar-login-com-sucesso;fazer-pedido-regristar-durante-o-checkout",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
             },
-            "keyword": "Quando "
+            "match": {
+              "location": "hooks.Hooks.fecharNavegador()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 409000000,
+              "status": "passed"
+            },
+            "line": 149,
+            "name": "adiciono item no carrinho",
+            "match": {
+              "location": "steps.CarrinhoSteps.adicionoItemNoCarrinho()"
+            },
+            "keyword": "E "
           },
           {
             "result": {
-              "duration": 67000000,
+              "duration": 1837000000,
               "status": "passed"
             },
-            "line": 100,
-            "name": "verifico texto do produtos \"ALL PRODUCTS\"",
+            "line": 150,
+            "name": "clico em visualizar carrinho",
+            "match": {
+              "location": "steps.CarrinhoSteps.clicoEmVisualizarCarrinho()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 145000000,
+              "status": "passed"
+            },
+            "line": 151,
+            "name": "clico em  checkout",
+            "match": {
+              "location": "steps.CarrinhoSteps.clicoEmCheckout()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2449000000,
+              "status": "passed"
+            },
+            "line": 152,
+            "name": "clico em fazer registro",
+            "match": {
+              "location": "steps.CarrinhoSteps.clicoEmFazerRegistro()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 380000000,
+              "status": "passed"
+            },
+            "line": 153,
+            "name": "preencho nome e email \"Taise\" \"automacaoteste@testee.com.br\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"ALL PRODUCTS\"",
-                  "offset": 27
+                  "val": "\"Taise\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"automacaoteste@testee.com.br\"",
+                  "offset": 30
                 }
               ],
-              "location": "steps.ProdutosSteps.verificoTextoDoProdutos(java.lang.String)"
+              "location": "steps.SignupLoginSteps.preenchoNomeEEmail(java.lang.String,java.lang.String)"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 93000000,
+              "duration": 1380000000,
               "status": "passed"
             },
-            "line": 101,
-            "name": "verifico que a lista de produtos e visivel",
+            "line": 154,
+            "name": "clico em me cadastrar",
             "match": {
-              "location": "steps.ProdutosSteps.verificoQueAListaDeProdutosEVisivel()"
+              "location": "steps.SignupLoginSteps.clicoEmMeCadastrar()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 5589000000,
+              "duration": 319000000,
               "status": "passed"
             },
-            "line": 102,
-            "name": "clico em detalhes do produto",
-            "match": {
-              "location": "steps.ProdutosSteps.clicoEmDetalhesDoProduto()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 34000000,
-              "status": "passed"
-            },
-            "line": 103,
-            "name": "verifico nome do produto \"Blue Top\"",
+            "line": 155,
+            "name": "preencho title \"Mrs.\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Blue Top\"",
-                  "offset": 25
+                  "val": "\"Mrs.\"",
+                  "offset": 15
                 }
               ],
-              "location": "steps.ProdutosSteps.verificoNomeDoProduto(java.lang.String)"
+              "location": "steps.AccountInformantionSteps.preenchotitle(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 281000000,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "preencho senha",
+            "match": {
+              "location": "steps.AccountInformantionSteps.preenchoSenha()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 339000000,
+              "status": "passed"
+            },
+            "line": 157,
+            "name": "preencho date of birth \"12\" \"November\" \"2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"November\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"2020\"",
+                  "offset": 39
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoDateOfBirth(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 82000000,
+              "status": "passed"
+            },
+            "line": 158,
+            "name": "seleciono Sign up for our newsletter!",
+            "match": {
+              "location": "steps.AccountInformantionSteps.selecionoSignUpForOurNewsletter()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 91000000,
+              "status": "passed"
+            },
+            "line": 159,
+            "name": "seleciono Receive special offers from our partners!",
+            "match": {
+              "location": "steps.AccountInformantionSteps.selecionoReceiveSpecialOffersFromOurPartners()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 123000000,
+              "status": "passed"
+            },
+            "line": 160,
+            "name": "preencho first name \"Taise\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Taise\"",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoFirstName(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 139000000,
+              "status": "passed"
+            },
+            "line": 161,
+            "name": "preencho last name \"Almeida\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Almeida\"",
+                  "offset": 19
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoLastName(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 117000000,
+              "status": "passed"
+            },
+            "line": 162,
+            "name": "preencho company \"Teste\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Teste\"",
+                  "offset": 17
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoCompany(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 142000000,
+              "status": "passed"
+            },
+            "line": 163,
+            "name": "prencho address \"rua dos lagos\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rua dos lagos\"",
+                  "offset": 16
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.prenchoAddress(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 61000000,
+              "status": "passed"
+            },
+            "line": 164,
+            "name": "seleciono country \"India\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"India\"",
+                  "offset": 18
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.selecionoCountry(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 121000000,
+              "status": "passed"
+            },
+            "line": 165,
+            "name": "preencho state \"india\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"india\"",
+                  "offset": 15
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoState(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 130000000,
+              "status": "passed"
+            },
+            "line": 166,
+            "name": "preencho city \"india\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"india\"",
+                  "offset": 14
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoCity(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 158000000,
+              "status": "passed"
+            },
+            "line": 167,
+            "name": "preencho zipcode \"026798000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"026798000\"",
+                  "offset": 17
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoZipcode(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 168,
+            "name": "preencho moblie number \"1198969585\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1198969585\"",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.preenchoMoblieNumber(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2238000000,
+              "status": "passed"
+            },
+            "line": 169,
+            "name": "clico em create account",
+            "match": {
+              "location": "steps.AccountInformantionSteps.clicoEmCreateAccount()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 4362000000,
+              "status": "passed"
+            },
+            "line": 170,
+            "name": "clico em continuar",
+            "match": {
+              "location": "steps.AccountInformantionSteps.clicoEmContinuar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 171,
+            "name": "valido nome logado é visivel",
+            "match": {
+              "location": "steps.AccountInformantionSteps.validoNomeLogadoÉVisivel()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 859000000,
+              "status": "passed"
+            },
+            "line": 172,
+            "name": "clico no botao carrinho",
+            "match": {
+              "location": "steps.CarrinhoSteps.clicoNoBotaoCarrinho()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2574000000,
+              "status": "passed"
+            },
+            "line": 173,
+            "name": "clico em  checkout",
+            "match": {
+              "location": "steps.CarrinhoSteps.clicoEmCheckout()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 24000000,
+              "status": "passed"
+            },
+            "line": 174,
+            "name": "verifico dados visivel",
+            "match": {
+              "location": "steps.CarrinhoSteps.verificoDadosVisivel()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1787000000,
+              "status": "passed"
+            },
+            "line": 175,
+            "name": "insiro descricao e clico em fazer pedido \"teste\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"teste\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.CarrinhoSteps.insiroDescricaoEClicoEmFazerPedido(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 733000000,
+              "status": "passed"
+            },
+            "line": 176,
+            "name": "prencho nome do cartao e numero do cartao e cvc e expiracao e ano",
+            "match": {
+              "location": "steps.CarrinhoSteps.prenchoNomeDoCartaoENumeroDoCartaoECvcEExpiracaoEAno(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "chave",
+                  "valor"
+                ]
+              },
+              {
+                "cells": [
+                  "nome do cartao",
+                  "teste"
+                ]
+              },
+              {
+                "cells": [
+                  "numero do cartao",
+                  "123456789"
+                ]
+              },
+              {
+                "cells": [
+                  "cvc",
+                  "822"
+                ]
+              },
+              {
+                "cells": [
+                  "expiracao",
+                  "05"
+                ]
+              },
+              {
+                "cells": [
+                  "ano",
+                  "2020"
+                ]
+              }
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3114000000,
+              "status": "passed"
+            },
+            "line": 183,
+            "name": "clico em submit",
+            "match": {
+              "location": "steps.CarrinhoSteps.clicoEmSubmit()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 86000000,
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "verifique a mensagem visivel \"ORDER PLACED!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ORDER PLACED!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.CarrinhoSteps.verifiqueAMensagemVisivel(java.lang.String)"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 106000000,
+              "status": "passed"
+            },
+            "line": 185,
+            "name": "valido nome logado é visivel",
+            "match": {
+              "location": "steps.AccountInformantionSteps.validoNomeLogadoÉVisivel()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1520000000,
+              "status": "passed"
+            },
+            "line": 186,
+            "name": "clico em excluir conta",
+            "match": {
+              "location": "steps.AccountInformantionSteps.clicoEmExcluirConta()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 27000000,
+              "status": "passed"
+            },
+            "line": 187,
+            "name": "valido que a conta foi excluida \"ACCOUNT DELETED!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ACCOUNT DELETED!\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.AccountInformantionSteps.validoQueAContaFoiExcluida(java.lang.String)"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 3631000000,
+              "status": "passed"
+            },
+            "line": 188,
+            "name": "clico em continuar",
+            "match": {
+              "location": "steps.AccountInformantionSteps.clicoEmContinuar()"
             },
             "keyword": "E "
           }
@@ -141,7 +625,7 @@
             "name": "@geral"
           },
           {
-            "name": "@ct06"
+            "name": "@ct12"
           }
         ]
       }
