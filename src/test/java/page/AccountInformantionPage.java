@@ -181,5 +181,7 @@ public class AccountInformantionPage extends InteracaoWeb {
     public String validoQueAContaFoiExcluida() {
         return excluircontamsg.getText().trim();
     }
+
+
 }
 

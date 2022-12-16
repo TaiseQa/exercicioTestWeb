@@ -15,6 +15,9 @@ public class SignupLoginPage extends InteracaoWeb {
     @FindBy(css = "[data-qa='signup-button']")
     private WebElement cadastrar;
 
+    @FindBy(css = "[data-qa='login-button']")
+    private WebElement login;
+
     @FindBy(xpath = "(//div/h2)[1]")
     private WebElement textoDeLOginVisivel;
 
@@ -35,6 +38,12 @@ public class SignupLoginPage extends InteracaoWeb {
 
     @FindBy(xpath = "(//form/p)[1]")
     private WebElement emailExixtente;
+
+    @FindBy(css="[data-qa='login-email']")
+    private WebElement getEmailLogin;
+
+    @FindBy(css="[data-qa='login-password']")
+    private WebElement senhaLogin;
 
     public void preenchoNomeEEmail(String name, String textoemail) {
         escrever(nome, name);
@@ -75,8 +84,18 @@ public class SignupLoginPage extends InteracaoWeb {
     public String verificoQueFuiReedirecionadoPraPaginaDeLogin() {
         return textoDeLOginVisivel.getText().trim();
     }
+
     public String verificoComTextoUsuarioExistente() {
         return emailExixtente.getText().trim();
 
+    }
+
+    public void clicoEmFazerLogin() {
+        clicarbotao(login);
+    }
+
+    public void preenchoNomeEEmailEmLogin(String email, String senha) {
+        escrever(getEmailLogin, email);
+        escrever(senhaLogin, senha);
     }
 }

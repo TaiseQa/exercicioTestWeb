@@ -33,7 +33,7 @@ Funcionalidade: criar login com sucesso
     E valido nome logado é visivel
     E clico em excluir conta
     Entao valido que a conta foi excluida "ACCOUNT DELETED!"
-    E clico em continuar
+
 
 
   @ct01
@@ -58,9 +58,9 @@ Funcionalidade: criar login com sucesso
   @ct03
   Cenario: registrar usuario com conta existente
     E clico em me inscrever
-    E preencho nome e email "teste" "teste@teste.com.br"
+    E  preencho nome e email "teste" "teste@teste.com.br"
     E clico em me cadastrar
-    E verifico com texto usuario existente "Email Address already exist!"
+    Entao verifico com texto usuario existente "Email Address already exist!"
 
   @ct04
   Cenario: formulario de contato
@@ -185,4 +185,4 @@ Funcionalidade: criar login com sucesso
     E valido nome logado é visivel
     E clico em excluir conta
     Entao valido que a conta foi excluida "ACCOUNT DELETED!"
-    E clico em continuar
+

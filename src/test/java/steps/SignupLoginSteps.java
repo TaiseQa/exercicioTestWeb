@@ -23,6 +23,10 @@ public class SignupLoginSteps {
         signupLoginPage.clicoEmMeCadastrar();
 
     }
+    @E("clico em fazer login")
+    public void clicoEmFazerLogin() {
+        signupLoginPage.clicoEmFazerLogin();
+    }
 
     @E("verifico se texto de login esta visivel {string}")
     public void verificoSeTextoDeLoginEstaVisivel(String texto) {
@@ -59,8 +63,13 @@ public class SignupLoginSteps {
         Assert.assertEquals(texto, signupLoginPage.verificoQueFuiReedirecionadoPraPaginaDeLogin());
     }
 
-    @E("verifico com texto usuario existente {string}")
+    @Entao("verifico com texto usuario existente {string}")
     public void verificoComTextoUsuarioExistente(String texto) {
 Assert.assertEquals(texto,signupLoginPage.verificoComTextoUsuarioExistente());
     }
+
+
+
+
+    
 }

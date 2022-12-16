@@ -122,6 +122,8 @@ public class AccountInformantionSteps {
     @Entao("valido que a conta foi excluida {string}")
     public void validoQueAContaFoiExcluida(String excluida) {
         Assert.assertEquals(excluida, accountInformantionPage.validoQueAContaFoiExcluida());
+        accountInformantionPage.clicoEmContinuar();
+
     }
 
 

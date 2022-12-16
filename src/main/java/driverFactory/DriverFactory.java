@@ -20,6 +20,7 @@ public class DriverFactory {
 
     public static void iniciarDriver() {
         WebDriverManager.chromedriver().setup();
+        //tirar anuncios
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
         driver = new ChromeDriver(options);
