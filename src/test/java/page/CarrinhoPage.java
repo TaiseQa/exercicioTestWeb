@@ -100,8 +100,14 @@ public class CarrinhoPage extends InteracaoWeb {
     @FindBy(id = "submit")
     private WebElement submit;
 
-    @FindBy (css="[data-qa='order-placed']")
+    @FindBy(css = "[data-qa='order-placed']")
     private WebElement pedifoFeito;
+
+    @FindBy(css = "[data-product-id='1']")
+    private WebElement excluirProduto;
+
+    @FindBy(xpath = "//p/b")
+    private WebElement textoDoCarrinho;
 
     public void ClicoEmCarrinho() throws InterruptedException {
         Thread.sleep(5000);
@@ -119,7 +125,9 @@ public class CarrinhoPage extends InteracaoWeb {
     }
 
     public void adicionoSegundoItem() {
+
         new Actions(getDriver()).moveToElement(modalProduto2).perform();
+        focarElemento(addCarinho2);
         clicarbotao(addCarinho2);
     }
 
@@ -213,8 +221,23 @@ public class CarrinhoPage extends InteracaoWeb {
     public void clicoEmSubmit() {
         clicarbotao(submit);
     }
+
     public String verifiqueAMensagemVisivel() {
         return pedifoFeito.getText();
+    }
+
+    public boolean verificoQueAPaginaCarrinhoEVisivel() {
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        return getDriver().findElements(By.cssSelector("[class='active']")).size() > 0;
+    }
+
+    public void excluoOProdutoDoCarrinho() {
+        clicarbotao(excluirProduto);
+    }
+
+    public String validoQueOProdutoFoiExcluido() throws InterruptedException {
+        Thread.sleep(1000);
+        return textoDoCarrinho.getText().trim();
     }
 }
 

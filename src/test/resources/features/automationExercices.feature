@@ -35,7 +35,6 @@ Funcionalidade: criar login com sucesso
     Entao valido que a conta foi excluida "ACCOUNT DELETED!"
 
 
-
   @ct01
 
   Cenario: login incorreto
@@ -186,3 +185,50 @@ Funcionalidade: criar login com sucesso
     E clico em excluir conta
     Entao valido que a conta foi excluida "ACCOUNT DELETED!"
 
+  @ct13
+  Cenario: fazer pedido regidtre se antes de checkout
+    E clico em me inscrever
+    E preencho nome e email "Taise" "Qateste@teste.com.br"
+    E clico em me cadastrar
+    E verifco que as informacoes das contas sao visiveis
+    E preencho title "Mrs."
+    E preencho senha
+    E preencho date of birth "12" "November" "2020"
+    E seleciono Sign up for our newsletter!
+    E seleciono Receive special offers from our partners!
+    E preencho first name "Taise"
+    E preencho last name "Almeida"
+    E preencho company "Teste"
+    E prencho address "rua dos lagos"
+    E seleciono country "India"
+    E preencho state "india"
+    E preencho city "india"
+    E preencho zipcode "026798000"
+    E preencho moblie number "1198969585"
+    E clico em create account
+    Entao valido conta criada com sucesso "ACCOUNT CREATED!"
+    E clico em continuar
+    E valido nome logado é visivel
+    E adiciono segundo item
+
+  @ct14
+  Cenario: remover produtos do carrinho
+    E adiciono item no carrinho
+    E clico em visualizar carrinho
+    E verifico que a pagina carrinho e visivel
+    E excluo o produto do carrinho
+    Entao valido que o produto foi excluido
+
+  @ct15
+  Cenario: exibir produtos da categoria
+    E verifico que catergoria mulheres esta visivel
+    E cliclo em mulheres opecao vestido
+    E verifico se estou na opcao vestido com texto "WOMEN - DRESS PRODUCTS"
+    E clico em categoria homens
+    Entao verifico que estou na pagina jeans com texto"MEN - JEANS PRODUCTS"
+
+  @ignore
+  Cenario: verificar produtos de marcas
+    E verifico marca
+    E clico em uma marca
+    E verifico que fui redirecionado para paginas de marcas

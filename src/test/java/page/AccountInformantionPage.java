@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static driverFactory.DriverFactory.getDriver;
@@ -79,7 +80,7 @@ public class AccountInformantionPage extends InteracaoWeb {
     private WebElement excluircontamsg;
 
     public boolean verificoInformacoes() {
-        getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         return getDriver().findElements(By.xpath("(//h2[@class='title text-center'])[1]")).size() > 0;
     }
 

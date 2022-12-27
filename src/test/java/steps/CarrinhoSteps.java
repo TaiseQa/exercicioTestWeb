@@ -149,4 +149,21 @@ public class CarrinhoSteps {
     public void verifiqueAMensagemVisivel(String texto) {
         Assert.assertEquals(texto,carrinhoPage.verifiqueAMensagemVisivel());;
     }
+
+    @E("verifico que a pagina carrinho e visivel")
+    public void verificoQueAPaginaCarrinhoEVisivel() {
+        Assert.assertTrue(carrinhoPage.verificoQueAPaginaCarrinhoEVisivel());
+
+    }
+
+    @E("excluo o produto do carrinho")
+    public void excluoOProdutoDoCarrinho() {
+        carrinhoPage.excluoOProdutoDoCarrinho();
+
+    }
+
+    @Entao("valido que o produto foi excluido")
+        public void validoQueOProdutoFoiExcluido() throws InterruptedException {
+        Assert.assertEquals("Cart is empty!",carrinhoPage.validoQueOProdutoFoiExcluido());
+        }
 }

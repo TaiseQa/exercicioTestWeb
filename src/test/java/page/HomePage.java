@@ -15,7 +15,7 @@ public class HomePage extends InteracaoWeb {
   @FindBy (css = "[href='/login']")
   private WebElement inscreverLogin;
 
-    public void queAcessoONavegador(String url) {
+    public void     queAcessoONavegador(String url) {
         getDriver().get(url);
     }
 

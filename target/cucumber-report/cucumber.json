@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3925000000,
+              "duration": 3638000000,
               "status": "passed"
             },
             "line": 7,
@@ -29,7 +29,7 @@
           },
           {
             "result": {
-              "duration": 29000000,
+              "duration": 33000000,
               "status": "passed"
             },
             "line": 8,
@@ -42,11 +42,11 @@
         ]
       },
       {
-        "start_timestamp": "2022-12-16T18:40:40.592Z",
+        "start_timestamp": "2022-12-27T19:14:06.948Z",
         "before": [
           {
             "result": {
-              "duration": 2498000000,
+              "duration": 2874000000,
               "status": "passed"
             },
             "match": {
@@ -54,10 +54,10 @@
             }
           }
         ],
-        "line": 59,
-        "name": "registrar usuario com conta existente",
+        "line": 231,
+        "name": "verificar produtos de marcas",
         "description": "",
-        "id": "criar-login-com-sucesso;registrar-usuario-com-conta-existente",
+        "id": "criar-login-com-sucesso;verificar-produtos-de-marcas",
         "after": [
           {
             "result": {
@@ -73,67 +73,39 @@
         "steps": [
           {
             "result": {
-              "duration": 1401000000,
+              "duration": 39000000,
               "status": "passed"
             },
-            "line": 60,
-            "name": "clico em me inscrever",
+            "line": 232,
+            "name": "verifico marca",
             "match": {
-              "location": "steps.HomeSteps.clicoEmMeInscrever()"
+              "location": "steps.MarcaSteps.verificoMarca()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 316000000,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"iframe#ad_iframe\"}\n  (Session info: chrome\u003d108.0.5359.125)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.0.0\u0027, revision: \u00273a21814679\u0027\nSystem info: host: \u0027DESKTOP-NKPEHKB\u0027, ip: \u0027192.168.83.179\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_331\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [52c91560df36d78bc09a4db459bb056b, findElement {using\u003dcss selector, value\u003diframe#ad_iframe}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\\Users\\Bruno\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51820}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51820/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 52c91560df36d78bc09a4db459bb056b\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)\r\n\tat interacaoWeb.InteracaoWeb.teste(InteracaoWeb.java:68)\r\n\tat page.MarcaPage.clicoEmUmaMarca(MarcaPage.java:32)\r\n\tat steps.MarcaSteps.clicoEmUmaMarca(MarcaSteps.java:21)\r\n\tat ✽.clico em uma marca(classpath:features/automationExercices.feature:233)\r\n",
+              "duration": 11400000000,
+              "status": "failed"
             },
-            "line": 61,
-            "name": "preencho nome e email \"teste\" \"teste@teste.com.br\"",
+            "line": 233,
+            "name": "clico em uma marca",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"teste\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"teste@teste.com.br\"",
-                  "offset": 30
-                }
-              ],
-              "location": "steps.SignupLoginSteps.preenchoNomeEEmail(java.lang.String,java.lang.String)"
+              "location": "steps.MarcaSteps.clicoEmUmaMarca()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 1838000000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 62,
-            "name": "clico em me cadastrar",
+            "line": 234,
+            "name": "verifico que fui redirecionado para paginas de marcas",
             "match": {
-              "location": "steps.SignupLoginSteps.clicoEmMeCadastrar()"
+              "location": "steps.MarcaSteps.verificoQueFuiRedirecionadoParaPaginasDeMarcas()"
             },
             "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 41000000,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "verifico com texto usuario existente \"Email Address already exist!\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Email Address already exist!\"",
-                  "offset": 37
-                }
-              ],
-              "location": "steps.SignupLoginSteps.verificoComTextoUsuarioExistente(java.lang.String)"
-            },
-            "keyword": "Entao "
           }
         ],
         "tags": [
@@ -141,7 +113,7 @@
             "name": "@geral"
           },
           {
-            "name": "@ct03"
+            "name": "@ct16"
           }
         ]
       }
