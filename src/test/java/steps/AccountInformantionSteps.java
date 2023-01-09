@@ -20,7 +20,6 @@ public class AccountInformantionSteps {
     @E("preencho title {string}")
     public void preenchotitle(String texto) {
         accountInformantionPage.preenchotitle(texto);
-
     }
 
     @E("preencho senha")
@@ -57,7 +56,6 @@ public class AccountInformantionSteps {
     @E("preencho company {string}")
     public void preenchoCompany(String companhia) {
         accountInformantionPage.preenchoCompany(companhia);
-
     }
 
     @E("prencho address {string}")
@@ -73,7 +71,6 @@ public class AccountInformantionSteps {
     @E("preencho state {string}")
     public void preenchoState(String texto) {
         accountInformantionPage.preenchoState(texto);
-
     }
 
     @E("preencho city {string}")
@@ -110,20 +107,17 @@ public class AccountInformantionSteps {
     @E("valido nome logado é visivel")
     public void validoNomeLogadoÉVisivel() {
         accountInformantionPage.validoNomeLogadoÉVisivel();
-
     }
 
     @E("clico em excluir conta")
     public void clicoEmExcluirConta() {
         accountInformantionPage.clicoEmExcluirConta();
-
     }
 
     @Entao("valido que a conta foi excluida {string}")
     public void validoQueAContaFoiExcluida(String excluida) {
         Assert.assertEquals(excluida, accountInformantionPage.validoQueAContaFoiExcluida());
         accountInformantionPage.clicoEmContinuar();
-
     }
 
 

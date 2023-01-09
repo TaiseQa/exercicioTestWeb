@@ -1,6 +1,5 @@
 package interacaoWeb;
 
-import io.github.sukgu.Shadow;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -16,7 +15,6 @@ public class InteracaoWeb {
 
     public InteracaoWeb() {
         PageFactory.initElements(getDriver(), this);
-
     }
 
     public void esperarElementoClicavel(WebElement elemento) {
@@ -33,7 +31,6 @@ public class InteracaoWeb {
         esperarElementoClicavel(element);
         element.clear();
         element.sendKeys(texto);
-
     }
 
     public void verificarIframe() {
@@ -43,7 +40,6 @@ public class InteracaoWeb {
             getDriver().switchTo().defaultContent();
         }
     }
-
 
     public boolean verificoQueAPaginaEstaVisivelXpath(String xpathElement) {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
@@ -57,18 +53,16 @@ public class InteracaoWeb {
 
     public void focarElemento(WebElement element) {
         ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
-
     }
 
-    public void teste(){
-//        Shadow shadow = new Shadow(getDriver());
-//        WebElement element = shadow.findElementByXPath("/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/div/div[3]");
-//        element.click();
-        getDriver().switchTo().frame(getDriver().findElement(By.cssSelector("iframe#aswift_6")));
-        getDriver().switchTo().frame(getDriver().findElement(By.cssSelector("iframe#ad_iframe")));
-        getDriver().findElement(By.id("dismiss-button")).click();
-        getDriver().switchTo().defaultContent();
+    public void esperar(long time) {
+        try {
+            synchronized (this) {
+                wait(time);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-
 
 }

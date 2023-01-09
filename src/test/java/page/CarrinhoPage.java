@@ -6,13 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import javax.swing.*;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static driverFactory.DriverFactory.getDriver;
 
@@ -109,8 +105,8 @@ public class CarrinhoPage extends InteracaoWeb {
     @FindBy(xpath = "//p/b")
     private WebElement textoDoCarrinho;
 
-    public void ClicoEmCarrinho() throws InterruptedException {
-        Thread.sleep(5000);
+    public void ClicoEmCarrinho() {
+        esperar(5000);
         clicarbotao(btnCarrinho);
     }
 
@@ -125,7 +121,6 @@ public class CarrinhoPage extends InteracaoWeb {
     }
 
     public void adicionoSegundoItem() {
-
         new Actions(getDriver()).moveToElement(modalProduto2).perform();
         focarElemento(addCarinho2);
         clicarbotao(addCarinho2);
@@ -166,7 +161,6 @@ public class CarrinhoPage extends InteracaoWeb {
 
     public void clicoEmVisualizarDetalhesDoProduto() {
         clicarbotao(detalhesDoProduto);
-
     }
 
     public boolean verificoVisualicaoDoDetalhes() {
@@ -235,10 +229,11 @@ public class CarrinhoPage extends InteracaoWeb {
         clicarbotao(excluirProduto);
     }
 
-    public String validoQueOProdutoFoiExcluido() throws InterruptedException {
-        Thread.sleep(1000);
+    public String validoQueOProdutoFoiExcluido() {
+        esperar(1000);
         return textoDoCarrinho.getText().trim();
     }
+
 }
 
 

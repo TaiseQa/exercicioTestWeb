@@ -17,24 +17,39 @@ public class MarcaPage extends InteracaoWeb {
     @FindBy(css = "[href='/brand_products/Polo']")
     private WebElement polo;
 
+    @FindBy(css = "[href='/brand_products/H&M']")
+    private WebElement marcaHeM;
+
+    @FindBy(xpath = "//h2[text()='Brand - Polo Products']")
+    private WebElement textoPolo;
+
 
     public String verificoMarca() {
         return textoMarca.getText().trim();
-
     }
 
-    public void clicoEmUmaMarca() throws InterruptedException {
-        Thread.sleep(3000);
+    public void clicoEmUmaMarca()  {
+        esperar(2000);
         focarElemento(polo);
-        Thread.sleep(3000);
+        esperar(3000);
         clicarbotao(polo);
-        Thread.sleep(5000);
-        teste();
+        esperar(5000);
     }
 
     public boolean verificoQueFuiRedirecionadoParaPaginasDeMarcas() {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        return getDriver().findElements(By.cssSelector("//h2[text() = 'Brand - Polo Products']")).size() > 0;
+        return getDriver().findElements(By.xpath("//h2[text() = 'Brand - Polo Products']")).size() > 0;
+    }
 
+    public void clicoEmUmaMarcaHM() {
+        esperar(2000);
+        focarElemento(marcaHeM);
+        esperar(2000);
+        clicarbotao(marcaHeM);
+    }
+
+    public boolean verificoQueOUsuarioPodeVerOsProdutodsDaMarca() {
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        return getDriver().findElements(By.xpath("//h2[text()='Brand - H&M Products']")).size() > 0;
     }
 }

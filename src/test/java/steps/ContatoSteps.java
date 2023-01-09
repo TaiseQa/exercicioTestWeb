@@ -7,31 +7,31 @@ import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 import page.ContatoPage;
 
-public class ContatoSteps  {
+public class ContatoSteps {
     ContatoPage contatoPage;
-    public ContatoSteps( ContatoPage contatoPage){
+
+    public ContatoSteps(ContatoPage contatoPage) {
         this.contatoPage = contatoPage;
     }
-    @Quando ("clico no botao fale conosco")
-        public void clicoNoBotaoFaleCOnosco(){
-        contatoPage.clicoNoBotaoFaleCOnosco();
 
+    @Quando("clico no botao fale conosco")
+    public void clicoNoBotaoFaleCOnosco() {
+        contatoPage.clicoNoBotaoFaleCOnosco();
     }
 
     @E("verifico que o testo no contato esta visivel {string}")
     public void verificoQueOTestoNoContatoEstaVisivel(String texto) {
-        Assert.assertEquals(texto,contatoPage.verificoQueOTestoNoContatoEstaVisivel());
+        Assert.assertEquals(texto, contatoPage.verificoQueOTestoNoContatoEstaVisivel());
     }
 
     @E("preencho nome e email e assunto e mensagem")
     public void preenchoNomeEEmailEAssuntoEMensagem(DataTable dataTable) {
         contatoPage.preenchoNomeEEmailEAssuntoEMensagem(dataTable);
-
     }
 
     @E("clico em subir arquivo")
     public void clicoEmSubirArquivo() {
-     contatoPage.clicoEmSubirArquivo();
+        contatoPage.clicoEmSubirArquivo();
     }
 
     @E("clico em enviar")
@@ -46,12 +46,12 @@ public class ContatoSteps  {
 
     @E("valido mensagem de sucesso visivel {string}")
     public void validoMensagemDeSucessoVisivel(String texto) {
-        Assert.assertEquals(texto,contatoPage.validoMensagemDeSucessoVisivel());
+        Assert.assertEquals(texto, contatoPage.validoMensagemDeSucessoVisivel());
     }
 
     @Entao("valido que fui redirecionado para pagina inicial")
     public void validoQueFuiRedirecionadoParaPaginaInicial() {
-        Assert.assertEquals("https://automationexercise.com/",contatoPage.validoQueFuiRedirecionadoParaPaginaInicial());
+        Assert.assertEquals("https://automationexercise.com/", contatoPage.validoQueFuiRedirecionadoParaPaginaInicial());
     }
 
 

@@ -10,7 +10,7 @@ Funcionalidade: criar login com sucesso
   @Teste
   Cenario: criar login e excluir login
     Quando clico em me inscrever
-    E preencho nome e email "Taise" "automacao@testee.com.br"
+    E preencho nome e email "Taise" "automacao@test.com.br"
     E clico em me cadastrar
     E verifco que as informacoes das contas sao visiveis
     E preencho title "Mrs."
@@ -232,3 +232,40 @@ Funcionalidade: criar login com sucesso
     E verifico marca
     E clico em uma marca
     E verifico que fui redirecionado para paginas de marcas
+    E clico em uma marca H&M
+    Entao verifico que o usuario pode ver os produtods da marca
+
+  @ct17
+  Cenario: verrificar produtos e verrificar carrinhos apos login
+    E clico em produtos
+    E verifico texto do produto "ALL PRODUCTS"
+    E pesquiso produto "blue top"
+    E verifico que o produto procurado esta visivel
+    E adiciono item no carrinho
+    E clico em visualizar carrinho
+    E verifico que o produto esta visivel no carinho
+    E clico em me inscrever
+    E preencho nome e email "Taise" "automacao@test.com.br"
+    E clico em carrinho
+    Entao verifico que o produto esta visivel no carinho
+
+  @ct18
+  Cenario: adicionar avaliacao do produto
+    E clico em produtos
+    E verifico texto do produtos "ALL PRODUCTS"
+    E clico no botao exibir produto
+    E verifico que esta visivel avaliacao
+    E preencho nome email e comentario
+      | chave      | valor              |
+      | nome       | taise              |
+      | email      | teste@teste.com.br |
+      | comentario | Aprovado           |
+    E clico em adicionar comentario
+    Entao verifico a mensagem "Thank you for your review."
+
+    @ct19
+    Cenario: adicinar itens recomendados no carrinho
+      E vou ate itens recomendados
+      E clico no produto
+      E clico em visualizar carrinho
+      Entao verifico que o produto esta visivel no carinho

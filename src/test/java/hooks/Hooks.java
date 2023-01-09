@@ -11,10 +11,10 @@ public class Hooks {
     @Before
     public void iniciarNavegador() {
         iniciarDriver();
-
     }
+
     @After
-    public void fecharNavegador(){
-//            matarDriver();
+    public void fecharNavegador() {
+        matarDriver();
     }
 }

@@ -8,19 +8,17 @@ import page.CasosDeTestePage;
 public class CasosDeTesteSteps {
     CasosDeTestePage casosDeTestePage;
 
-    public CasosDeTesteSteps (CasosDeTestePage casosDeTestePage) {
+    public CasosDeTesteSteps(CasosDeTestePage casosDeTestePage) {
         this.casosDeTestePage = casosDeTestePage;
-
     }
+
     @Quando("clico em caso de teste")
-    public void clicoEmCasoDeTeste(){
+    public void clicoEmCasoDeTeste() {
         casosDeTestePage.clicoEmCasoDeTeste();
     }
 
     @Entao("verifico que fui redirecionado para pagina caso de teste")
     public void verificoQueFuiRedirecionadoParaPaginaCasoDeTeste() {
-Assert.assertEquals("TEST CASES", casosDeTestePage.verificoQueFuiRedirecionadoParaPaginaCasoDeTeste());
+        Assert.assertEquals("TEST CASES", casosDeTestePage.verificoQueFuiRedirecionadoParaPaginaCasoDeTeste());
     }
-
-
 }

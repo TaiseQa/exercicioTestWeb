@@ -11,12 +11,11 @@ public class CasosDeTestePage extends InteracaoWeb {
     @FindBy(xpath = "//h2/b")
     private WebElement textoVisivel;
 
-
-    public void clicoEmCasoDeTeste(){
+    public void clicoEmCasoDeTeste() {
         clicarbotao(btnCasoDeTeste);
     }
+
     public String verificoQueFuiRedirecionadoParaPaginaCasoDeTeste() {
         return textoVisivel.getText();
-
     }
 }

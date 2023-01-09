@@ -163,7 +163,6 @@ public class AccountInformantionPage extends InteracaoWeb {
 
     public String validoContaCriadaComSucesso() {
         return sucesso.getText().trim();
-
     }
 
     public void clicoEmContinuar() {
@@ -171,7 +170,7 @@ public class AccountInformantionPage extends InteracaoWeb {
     }
 
     public boolean validoNomeLogadoÉVisivel() {
-        getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         return getDriver().findElements(By.xpath("//a//b")).size() > 0;
     }
 
@@ -183,6 +182,4 @@ public class AccountInformantionPage extends InteracaoWeb {
         return excluircontamsg.getText().trim();
     }
 
-
 }
-

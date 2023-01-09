@@ -15,14 +15,13 @@ public class SignupLoginSteps {
     @E("preencho nome e email {string} {string}")
     public void preenchoNomeEEmail(String nome, String email) {
         signupLoginPage.preenchoNomeEEmail(nome, email);
-
     }
 
     @E("clico em me cadastrar")
-    public void clicoEmMeCadastrar(){
+    public void clicoEmMeCadastrar() {
         signupLoginPage.clicoEmMeCadastrar();
-
     }
+
     @E("clico em fazer login")
     public void clicoEmFazerLogin() {
         signupLoginPage.clicoEmFazerLogin();
@@ -65,11 +64,8 @@ public class SignupLoginSteps {
 
     @Entao("verifico com texto usuario existente {string}")
     public void verificoComTextoUsuarioExistente(String texto) {
-Assert.assertEquals(texto,signupLoginPage.verificoComTextoUsuarioExistente());
+        Assert.assertEquals(texto, signupLoginPage.verificoComTextoUsuarioExistente());
     }
 
 
-
-
-    
 }

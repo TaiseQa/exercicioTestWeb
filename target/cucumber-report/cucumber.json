@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3638000000,
+              "duration": 7472000000,
               "status": "passed"
             },
             "line": 7,
@@ -29,7 +29,7 @@
           },
           {
             "result": {
-              "duration": 33000000,
+              "duration": 26000000,
               "status": "passed"
             },
             "line": 8,
@@ -42,11 +42,11 @@
         ]
       },
       {
-        "start_timestamp": "2022-12-27T19:14:06.948Z",
+        "start_timestamp": "2023-01-09T19:48:08.401Z",
         "before": [
           {
             "result": {
-              "duration": 2874000000,
+              "duration": 4237000000,
               "status": "passed"
             },
             "match": {
@@ -54,13 +54,14 @@
             }
           }
         ],
-        "line": 231,
-        "name": "verificar produtos de marcas",
+        "line": 267,
+        "name": "adicinar itens recomendados no carrinho",
         "description": "",
-        "id": "criar-login-com-sucesso;verificar-produtos-de-marcas",
+        "id": "criar-login-com-sucesso;adicinar-itens-recomendados-no-carrinho",
         "after": [
           {
             "result": {
+              "duration": 685000000,
               "status": "passed"
             },
             "match": {
@@ -73,39 +74,51 @@
         "steps": [
           {
             "result": {
-              "duration": 39000000,
+              "duration": 20000000,
               "status": "passed"
             },
-            "line": 232,
-            "name": "verifico marca",
+            "line": 268,
+            "name": "vou ate itens recomendados",
             "match": {
-              "location": "steps.MarcaSteps.verificoMarca()"
+              "location": "steps.ProdutosSteps.vouAteItensRecomendados()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"iframe#ad_iframe\"}\n  (Session info: chrome\u003d108.0.5359.125)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.0.0\u0027, revision: \u00273a21814679\u0027\nSystem info: host: \u0027DESKTOP-NKPEHKB\u0027, ip: \u0027192.168.83.179\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_331\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [52c91560df36d78bc09a4db459bb056b, findElement {using\u003dcss selector, value\u003diframe#ad_iframe}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\\Users\\Bruno\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51820}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51820/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 52c91560df36d78bc09a4db459bb056b\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)\r\n\tat interacaoWeb.InteracaoWeb.teste(InteracaoWeb.java:68)\r\n\tat page.MarcaPage.clicoEmUmaMarca(MarcaPage.java:32)\r\n\tat steps.MarcaSteps.clicoEmUmaMarca(MarcaSteps.java:21)\r\n\tat ✽.clico em uma marca(classpath:features/automationExercices.feature:233)\r\n",
-              "duration": 11400000000,
-              "status": "failed"
+              "duration": 8067000000,
+              "status": "passed"
             },
-            "line": 233,
-            "name": "clico em uma marca",
+            "line": 269,
+            "name": "clico no produto",
             "match": {
-              "location": "steps.MarcaSteps.clicoEmUmaMarca()"
+              "location": "steps.ProdutosSteps.clicoNoProduto()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1971000000,
+              "status": "passed"
             },
-            "line": 234,
-            "name": "verifico que fui redirecionado para paginas de marcas",
+            "line": 270,
+            "name": "clico em visualizar carrinho",
             "match": {
-              "location": "steps.MarcaSteps.verificoQueFuiRedirecionadoParaPaginasDeMarcas()"
+              "location": "steps.CarrinhoSteps.clicoEmVisualizarCarrinho()"
             },
             "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "line": 271,
+            "name": "verifico que o produto esta visivel no carinho",
+            "match": {
+              "location": "steps.ProdutosSteps.verificoQueOProdutoEstaVisivelNoCarinho()"
+            },
+            "keyword": "Entao "
           }
         ],
         "tags": [
@@ -113,7 +126,7 @@
             "name": "@geral"
           },
           {
-            "name": "@ct16"
+            "name": "@ct19"
           }
         ]
       }

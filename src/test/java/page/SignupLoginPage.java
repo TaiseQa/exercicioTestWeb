@@ -61,7 +61,6 @@ public class SignupLoginPage extends InteracaoWeb {
     public void preenchoEmailESenhaIncorretos(String texto) {
         escrever(emailLogin, texto);
         escrever(senha, "12345678");
-
     }
 
     public void clicoNoBotaoLogin() {
@@ -87,15 +86,10 @@ public class SignupLoginPage extends InteracaoWeb {
 
     public String verificoComTextoUsuarioExistente() {
         return emailExixtente.getText().trim();
-
     }
 
     public void clicoEmFazerLogin() {
         clicarbotao(login);
     }
 
-    public void preenchoNomeEEmailEmLogin(String email, String senha) {
-        escrever(getEmailLogin, email);
-        escrever(senhaLogin, senha);
-    }
 }

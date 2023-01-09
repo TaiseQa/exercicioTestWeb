@@ -3,7 +3,6 @@ package page;
 import interacaoWeb.InteracaoWeb;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -63,7 +62,6 @@ public class ContatoPage extends InteracaoWeb {
         escrever(email, data.get(2).get(1));
         escrever(assunto, data.get(3).get(1));
         escrever(menssagem, data.get(4).get(1));
-
     }
 
     public void clicoEmSubirArquivo() {
@@ -87,8 +85,6 @@ public class ContatoPage extends InteracaoWeb {
 
     public String validoQueFuiRedirecionadoParaPaginaInicial() {
         clicarbotao(btnPaginaInicial);
-        return  getDriver().getCurrentUrl();
-
-
+        return getDriver().getCurrentUrl();
     }
 }

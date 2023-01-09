@@ -16,14 +16,11 @@ public class HomeSteps {
     @Dado("que acesso o navegador {string}")
     public void queAcessoONavegador(String url) {
         homePage.queAcessoONavegador(url);
-
-
     }
 
     @E("verifico que a pagina esta visivel")
     public void verificoQueAPaginaEstaVisivel() {
-       Assert.assertTrue(homePage.verificoQueAPaginaEstaVisivel());
-
+        Assert.assertTrue(homePage.verificoQueAPaginaEstaVisivel());
     }
 
     @Quando("clico em me inscrever")

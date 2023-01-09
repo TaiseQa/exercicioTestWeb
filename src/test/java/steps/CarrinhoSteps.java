@@ -17,7 +17,6 @@ public class CarrinhoSteps {
     @Quando("clico em carrinho")
     public void ClicoEmCarrinho() throws InterruptedException {
         carrinhoPage.ClicoEmCarrinho();
-
     }
 
     @E("adiciono item no carrinho")
@@ -163,7 +162,11 @@ public class CarrinhoSteps {
     }
 
     @Entao("valido que o produto foi excluido")
-        public void validoQueOProdutoFoiExcluido() throws InterruptedException {
+        public void validoQueOProdutoFoiExcluido()  {
         Assert.assertEquals("Cart is empty!",carrinhoPage.validoQueOProdutoFoiExcluido());
         }
+
+    @E("clico em adicionar ao carrinho")
+    public void clicoEmAdicionarAoCarrinho() {
+    }
 }

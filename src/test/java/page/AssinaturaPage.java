@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 import static driverFactory.DriverFactory.getDriver;
 
 public class AssinaturaPage extends InteracaoWeb {
@@ -20,27 +22,27 @@ public class AssinaturaPage extends InteracaoWeb {
     @FindBy(id = "subscribe")
     private WebElement btnAssinatura;
 
-    @FindBy(css="[class='col-md-9 form-group']")
+    @FindBy(css = "[class='col-md-9 form-group']")
     private WebElement TextoDeSucesso;
 
-    public String verificoTextoAssinatura(){
-         JavascriptExecutor js = (JavascriptExecutor)getDriver();
-         js.executeScript("scrollBy(0,250)","");
-         return textoAssinatura.getText();
+    public String verificoTextoAssinatura() {
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("scrollBy(0,250)", "");
+        return textoAssinatura.getText();
+    }
 
-    }
     public void preenchoEmail(String texto) {
-        escrever(email,texto);
+        escrever(email, texto);
     }
+
     public void clicoNoBotaoAssinatura() {
         clicarbotao(btnAssinatura);
     }
+
     public String validoMensagemDeSucesso() {
-        WebDriverWait wait= new WebDriverWait(getDriver(),5);
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[class='col-md-9 form-group']")));
         return TextoDeSucesso.getText();
-
     }
 
-
-    }
+}

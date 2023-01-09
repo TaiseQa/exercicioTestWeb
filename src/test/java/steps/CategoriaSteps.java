@@ -8,33 +8,32 @@ import page.CategoriaPage;
 public class CategoriaSteps {
     CategoriaPage categoriaPage;
 
-    public CategoriaSteps(CategoriaPage categoriaPage){
+    public CategoriaSteps(CategoriaPage categoriaPage) {
         this.categoriaPage = categoriaPage;
     }
+
     @E("verifico que catergoria mulheres esta visivel")
-    public void verificoQueCategoriaMulheresEstaVisivel(){
+    public void verificoQueCategoriaMulheresEstaVisivel() {
         Assert.assertTrue(categoriaPage.verificoQueCategoriaMulheresEstaVisivel());
     }
 
     @E("cliclo em mulheres opecao vestido")
     public void clicloEmMulheresOpecaoVestido() {
         categoriaPage.clicloEmMulheresOpecaoVestido();
-
     }
 
     @E("verifico se estou na opcao vestido com texto {string}")
-    public void verificoSeEstouNaOpcaoVestidoComTexto(String texto) throws InterruptedException {
-        Assert.assertEquals(texto,categoriaPage.verificoSeEstouNaOpcaoVestido());
+    public void verificoSeEstouNaOpcaoVestidoComTexto(String texto)  {
+        Assert.assertEquals(texto, categoriaPage.verificoSeEstouNaOpcaoVestido());
     }
 
     @E("clico em categoria homens")
-    public void clicoEmCategoriaHomens() throws InterruptedException {
+    public void clicoEmCategoriaHomens()  {
         categoriaPage.clicoEmCategoriaHomens();
-
     }
 
     @Entao("verifico que estou na pagina jeans com texto{string}")
     public void verificoQueEstouNaPaginaJeansComTexto(String texto) {
-        Assert.assertEquals(texto,categoriaPage.verificoQueEstouNaPaginaJeansComTexto());
+        Assert.assertEquals(texto, categoriaPage.verificoQueEstouNaPaginaJeansComTexto());
     }
 }
