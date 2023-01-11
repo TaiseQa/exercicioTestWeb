@@ -80,8 +80,7 @@ public class AccountInformantionPage extends InteracaoWeb {
     private WebElement excluircontamsg;
 
     public boolean verificoInformacoes() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        return getDriver().findElements(By.xpath("(//h2[@class='title text-center'])[1]")).size() > 0;
+       return verificoQueAPaginaEstaVisivelXpath("(//h2[@class='title text-center'])[1]");
     }
 
     public void preenchotitle(String title) {
@@ -170,8 +169,7 @@ public class AccountInformantionPage extends InteracaoWeb {
     }
 
     public boolean validoNomeLogadoÉVisivel() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        return getDriver().findElements(By.xpath("//a//b")).size() > 0;
+        return verificoQueAPaginaEstaVisivelXpath("//a//b");
     }
 
     public void clicoEmExcluirConta() {

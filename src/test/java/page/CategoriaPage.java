@@ -30,8 +30,7 @@ public class CategoriaPage extends InteracaoWeb {
     private WebElement textoVisivelJeans;
 
     public boolean verificoQueCategoriaMulheresEstaVisivel() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        return getDriver().findElements(By.cssSelector("[href='#Women']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelCss("[href='#Women']");
     }
 
     public void clicloEmMulheresOpecaoVestido() {

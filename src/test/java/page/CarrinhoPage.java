@@ -105,6 +105,24 @@ public class CarrinhoPage extends InteracaoWeb {
     @FindBy(xpath = "//p/b")
     private WebElement textoDoCarrinho;
 
+    @FindBy(xpath = "//*[@id='address_delivery']/li[4]")
+    private WebElement enderecoDeEntrega;
+
+    @FindBy(xpath = "//*[@id='address_invoice']/li[4]")
+    private WebElement enderecoDeCobranca;
+
+    @FindBy(xpath = "//p/a[@href='/login']")
+    private WebElement login;
+
+    @FindBy(css = "[name='message']")
+    private WebElement mensagem;
+
+    @FindBy(css = "[href='/payment']")
+    private WebElement pagamento;
+
+    @FindBy (xpath = "//a[text()='Download Invoice']")
+    private WebElement download;
+
     public void ClicoEmCarrinho() {
         esperar(5000);
         clicarbotao(btnCarrinho);
@@ -131,8 +149,7 @@ public class CarrinhoPage extends InteracaoWeb {
     }
 
     public boolean verificoOsProdutosEstaoVisiveis() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        return getDriver().findElements(By.cssSelector("[class='table table-condensed']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelCss("[class='table table-condensed']");
     }
 
     public String verificoPrecoDoItem() {
@@ -164,8 +181,7 @@ public class CarrinhoPage extends InteracaoWeb {
     }
 
     public boolean verificoVisualicaoDoDetalhes() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        return getDriver().findElements(By.cssSelector("[class='col-sm-7']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelCss("[class='col-sm-7']");
     }
 
     public void preenchoQuantidade(String texto) {
@@ -194,8 +210,7 @@ public class CarrinhoPage extends InteracaoWeb {
     }
 
     public boolean verificoDadosVisivel() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        return getDriver().findElements(By.id("address_delivery")).size() > 0;
+       return verificoQueAPaginaEstaVisivelId("address_delivery");
     }
 
     public void insiroDescricaoEClicoEmFazerPedido(String texto) {
@@ -221,8 +236,7 @@ public class CarrinhoPage extends InteracaoWeb {
     }
 
     public boolean verificoQueAPaginaCarrinhoEVisivel() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        return getDriver().findElements(By.cssSelector("[class='active']")).size() > 0;
+       return verificoQueAPaginaEstaVisivelCss("[class='active']");
     }
 
     public void excluoOProdutoDoCarrinho() {
@@ -233,7 +247,29 @@ public class CarrinhoPage extends InteracaoWeb {
         esperar(1000);
         return textoDoCarrinho.getText().trim();
     }
-
+    public String verificoQueOEnderecoDeEntregaE() {
+        return enderecoDeEntrega.getText();
+    }
+    public String verificoOEnderecoDeCobrancaE() {
+        return enderecoDeCobranca.getText();
+    }
+    public void clicoEmRegistrar() {
+        clicarbotao(login);
+    }
+    public void adicionoComentario(String texto) {
+        escrever(mensagem, texto);
+    }
+    public void clicoEmFazerPedido() {
+        clicarbotao(pagamento);
+    }
+    public void clicoEmFazerDownload() {
+        esperar(1000);
+        clicarbotao(download);
+        esperar(2000);
+    }
+    public boolean validoQueODownloadFoiFeito() {
+        return isFileDownloaded("C:/Users/Bruno/Downloads", "invoice.txt");
+    }
 }
 
 

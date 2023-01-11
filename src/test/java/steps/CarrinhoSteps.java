@@ -146,7 +146,8 @@ public class CarrinhoSteps {
 
     @Entao("verifique a mensagem visivel {string}")
     public void verifiqueAMensagemVisivel(String texto) {
-        Assert.assertEquals(texto,carrinhoPage.verifiqueAMensagemVisivel());;
+        Assert.assertEquals(texto, carrinhoPage.verifiqueAMensagemVisivel());
+        ;
     }
 
     @E("verifico que a pagina carrinho e visivel")
@@ -162,11 +163,48 @@ public class CarrinhoSteps {
     }
 
     @Entao("valido que o produto foi excluido")
-        public void validoQueOProdutoFoiExcluido()  {
-        Assert.assertEquals("Cart is empty!",carrinhoPage.validoQueOProdutoFoiExcluido());
-        }
+    public void validoQueOProdutoFoiExcluido() {
+        Assert.assertEquals("Cart is empty!", carrinhoPage.validoQueOProdutoFoiExcluido());
+    }
 
     @E("clico em adicionar ao carrinho")
     public void clicoEmAdicionarAoCarrinho() {
+    }
+
+    @E("verifico que o endereco de entrega e {string}")
+    public void verificoQueOEnderecoDeEntregaE(String texto) {
+        Assert.assertEquals(texto, carrinhoPage.verificoQueOEnderecoDeEntregaE());
+    }
+
+    @E("verifico o endereco de cobranca e {string}")
+    public void verificoOEnderecoDeCobrancaE(String texto) {
+        Assert.assertEquals(texto, carrinhoPage.verificoOEnderecoDeCobrancaE());
+    }
+
+    @E("clico em registrar")
+    public void clicoEmRegistrar() {
+        carrinhoPage.clicoEmRegistrar();
+    }
+
+    @E("adiciono comentario {string}")
+    public void adicionoComentario(String texto) {
+        carrinhoPage.adicionoComentario(texto);
+    }
+
+    @E("clico em fazer pedido")
+    public void clicoEmFazerPedido() {
+        carrinhoPage.clicoEmFazerPedido();
+    }
+
+    @E("clico em fazer download")
+    public void clicoEmFazerDownload() {
+        carrinhoPage.clicoEmFazerDownload();
+
+    }
+
+    @Entao("valido que o download foi feito")
+    public void validoQueODownloadFoiFeito() {
+        Assert.assertTrue(carrinhoPage.validoQueODownloadFoiFeito());
+
     }
 }

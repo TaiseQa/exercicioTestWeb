@@ -36,7 +36,6 @@ Funcionalidade: criar login com sucesso
 
 
   @ct01
-
   Cenario: login incorreto
     Quando clico em me inscrever
     E verifico se texto de login esta visivel "Login to your account"
@@ -149,7 +148,7 @@ Funcionalidade: criar login com sucesso
     E clico em visualizar carrinho
     E clico em  checkout
     E clico em fazer registro
-    E preencho nome e email "Taise" "automacaoteste@testee.com.br"
+    E preencho nome e email "Taise" "automacaoteste@te.com.br"
     E clico em me cadastrar
     E preencho title "Mrs."
     E preencho senha
@@ -188,7 +187,7 @@ Funcionalidade: criar login com sucesso
   @ct13
   Cenario: fazer pedido regidtre se antes de checkout
     E clico em me inscrever
-    E preencho nome e email "Taise" "Qateste@teste.com.br"
+    E preencho nome e email "Taise" "Qateste@tes.com.br"
     E clico em me cadastrar
     E verifco que as informacoes das contas sao visiveis
     E preencho title "Mrs."
@@ -210,6 +209,8 @@ Funcionalidade: criar login com sucesso
     E clico em continuar
     E valido nome logado é visivel
     E adiciono segundo item
+    E clico em excluir conta
+    Entao valido que a conta foi excluida "ACCOUNT DELETED!"
 
   @ct14
   Cenario: remover produtos do carrinho
@@ -269,3 +270,89 @@ Funcionalidade: criar login com sucesso
       E clico no produto
       E clico em visualizar carrinho
       Entao verifico que o produto esta visivel no carinho
+
+      @ct20
+      Cenario: verificar endereço na pagina no checkout
+        Quando clico em me inscrever
+        E preencho nome e email "Taise" "automacao@test.com.br"
+        E clico em me cadastrar
+        E verifco que as informacoes das contas sao visiveis
+        E preencho title "Mrs."
+        E preencho senha
+        E preencho date of birth "12" "November" "2020"
+        E seleciono Sign up for our newsletter!
+        E seleciono Receive special offers from our partners!
+        E preencho first name "Taise"
+        E preencho last name "Almeida"
+        E preencho company "Teste"
+        E prencho address "rua dos lagos"
+        E seleciono country "India"
+        E preencho state "india"
+        E preencho city "india"
+        E preencho zipcode "026798000"
+        E preencho moblie number "1198969585"
+        E clico em create account
+        Entao valido conta criada com sucesso "ACCOUNT CREATED!"
+        E clico em continuar
+        E valido nome logado é visivel
+        E adiciono item no carrinho
+        E clico em visualizar carrinho
+        E verifico que a pagina carrinho e visivel
+        E clico em  checkout
+        E verifico que o endereco de entrega e "rua dos lagos"
+        E verifico o endereco de cobranca e "rua dos lagos"
+        E clico em excluir conta
+        Entao valido que a conta foi excluida "ACCOUNT DELETED!"
+
+        @ct21
+        Cenario: download de fatura apos pedido de compra
+          E adiciono item no carrinho
+          E clico em visualizar carrinho
+          E verifico que a pagina carrinho e visivel
+          E clico em  checkout
+          E clico em registrar
+          E preencho nome e email "Taise" "automacao@test.com.br"
+          E clico em me cadastrar
+          E verifco que as informacoes das contas sao visiveis
+          E preencho title "Mrs."
+          E preencho senha
+          E preencho date of birth "12" "November" "2020"
+          E seleciono Sign up for our newsletter!
+          E seleciono Receive special offers from our partners!
+          E preencho first name "Taise"
+          E preencho last name "Almeida"
+          E preencho company "Teste"
+          E prencho address "rua dos lagos"
+          E seleciono country "India"
+          E preencho state "india"
+          E preencho city "india"
+          E preencho zipcode "026798000"
+          E preencho moblie number "1198969585"
+          E clico em create account
+          Entao valido conta criada com sucesso "ACCOUNT CREATED!"
+          E clico em continuar
+          E valido nome logado é visivel
+          E clico em carrinho
+          E clico em  checkout
+          E verifico dados visivel
+          E adiciono comentario "teste"
+          E clico em fazer pedido
+          E prencho nome do cartao e numero do cartao e cvc e expiracao e ano
+            | chave            | valor     |
+            | nome do cartao   | teste     |
+            | numero do cartao | 123456789 |
+            | cvc              | 822       |
+            | expiracao        | 05        |
+            | ano              | 2020      |
+          E clico em submit
+          E clico em fazer download
+          Entao valido que o download foi feito
+          E clico em excluir conta
+          Entao valido que a conta foi excluida "ACCOUNT DELETED!"
+
+          @ct22
+          Cenario: verificar rolagem com seta
+            Quando rolo ate o final da pagina
+            E verifico assinatura
+            E clico na seta para subir a pagina
+            Entao valido mensagem "Full-Fledged practice website for Automation Engineers"

@@ -7,11 +7,12 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:features",
-        tags = "@ct19",
+        tags = "@geral ",
         glue = {"steps", "hooks"},
         plugin = {"pretty",
-                "json:target/cucumber-report/cucumber.json"},
-        monochrome = true
+                "json:target/cucumber-report/cucumber.json",
+                "de.monochromata.cucumber.report.PrettyReports:target/relatorio"},
+        monochrome = false
 
 
 )

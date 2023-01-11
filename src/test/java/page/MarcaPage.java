@@ -37,8 +37,7 @@ public class MarcaPage extends InteracaoWeb {
     }
 
     public boolean verificoQueFuiRedirecionadoParaPaginasDeMarcas() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        return getDriver().findElements(By.xpath("//h2[text() = 'Brand - Polo Products']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelXpath("//h2[text() = 'Brand - Polo Products']");
     }
 
     public void clicoEmUmaMarcaHM() {
@@ -49,7 +48,6 @@ public class MarcaPage extends InteracaoWeb {
     }
 
     public boolean verificoQueOUsuarioPodeVerOsProdutodsDaMarca() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        return getDriver().findElements(By.xpath("//h2[text()='Brand - H&M Products']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelXpath("//h2[text()='Brand - H&M Products']");
     }
 }

@@ -93,8 +93,7 @@ public class ProdutosPage extends InteracaoWeb {
     }
 
     public boolean verificoQueAListaDeProdutosEVisivel() {
-        getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        return getDriver().findElements(By.xpath("//div[@class='features_items']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelXpath("//div[@class='features_items']");
     }
 
     public void clicoEmDetalhesDoProduto() {
@@ -131,8 +130,7 @@ public class ProdutosPage extends InteracaoWeb {
     }
 
     public boolean verificoProdutoVisivel() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        return getDriver().findElements(By.xpath("//div[@class='productinfo text-center']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelXpath("//div[@class='productinfo text-center']");
     }
 
     public String verificoTextoDoProduto() {
@@ -145,8 +143,7 @@ public class ProdutosPage extends InteracaoWeb {
     }
 
     public boolean verificoQueOProdutoEstaVisivelNoCarinho() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        return getDriver().findElements(By.xpath("//img[@src='get_product_picture/1']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelXpath("//img[@src='get_product_picture/1']");
     }
 
     public void clicoNoBotaoExibirProduto() {
@@ -154,8 +151,7 @@ public class ProdutosPage extends InteracaoWeb {
     }
 
     public boolean verificoQueEstaVisivelAvaliacao() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        return getDriver().findElements(By.cssSelector("[href='#reviews']")).size() > 0;
+        return verificoQueAPaginaEstaVisivelCss("[href='#reviews']");
     }
 
     public void preenchoNomeEmailEComentario(DataTable dataTable) {

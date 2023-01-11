@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.time.Duration;
 
 import static driverFactory.DriverFactory.getDriver;
@@ -42,13 +43,18 @@ public class InteracaoWeb {
     }
 
     public boolean verificoQueAPaginaEstaVisivelXpath(String xpathElement) {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         return getDriver().findElements(By.xpath(xpathElement)).size() > 0;
     }
 
     public boolean verificoQueAPaginaEstaVisivelId(String idElement) {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        return getDriver().findElements(By.id("idElement")).size() > 0;
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        return getDriver().findElements(By.id(idElement)).size() > 0;
+    }
+
+    public boolean verificoQueAPaginaEstaVisivelCss(String CssElement) {
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        return getDriver().findElements(By.cssSelector(CssElement)).size() > 0;
     }
 
     public void focarElemento(WebElement element) {
@@ -64,5 +70,17 @@ public class InteracaoWeb {
             e.printStackTrace();
         }
     }
+    public boolean isFileDownloaded(String downloadPath, String fileName) {
+        File dir = new File(downloadPath);
+        File[] dirContents = dir.listFiles();
 
+        for (int i = 0; i < dirContents.length; i++) {
+            if (dirContents[i].getName().equals(fileName)) {
+                // File has been found, it can now be deleted:
+                dirContents[i].delete();
+                return true;
+            }
+        }
+        return false;
+    }
 }
