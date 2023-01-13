@@ -10,7 +10,7 @@ Funcionalidade: criar login com sucesso
   @Teste
   Cenario: criar login e excluir login
     Quando clico em me inscrever
-    E preencho nome e email "Taise" "automacao@test.com.br"
+    E preencho nome e email "Taise" ""
     E clico em me cadastrar
     E verifco que as informacoes das contas sao visiveis
     E preencho title "Mrs."
@@ -56,7 +56,7 @@ Funcionalidade: criar login com sucesso
   @ct03
   Cenario: registrar usuario com conta existente
     E clico em me inscrever
-    E  preencho nome e email "teste" "teste@teste.com.br"
+    E  preencho nome e email correto "teste" "teste@teste.com.br"
     E clico em me cadastrar
     Entao verifico com texto usuario existente "Email Address already exist!"
 
@@ -148,7 +148,7 @@ Funcionalidade: criar login com sucesso
     E clico em visualizar carrinho
     E clico em  checkout
     E clico em fazer registro
-    E preencho nome e email "Taise" "automacaoteste@te.com.br"
+    E preencho nome e email "Taise" ""
     E clico em me cadastrar
     E preencho title "Mrs."
     E preencho senha
@@ -187,7 +187,7 @@ Funcionalidade: criar login com sucesso
   @ct13
   Cenario: fazer pedido regidtre se antes de checkout
     E clico em me inscrever
-    E preencho nome e email "Taise" "Qateste@tes.com.br"
+    E preencho nome e email "Taise" ""
     E clico em me cadastrar
     E verifco que as informacoes das contas sao visiveis
     E preencho title "Mrs."
@@ -274,7 +274,7 @@ Funcionalidade: criar login com sucesso
       @ct20
       Cenario: verificar endereço na pagina no checkout
         Quando clico em me inscrever
-        E preencho nome e email "Taise" "automacao@test.com.br"
+        E preencho nome e email "Taise" ""
         E clico em me cadastrar
         E verifco que as informacoes das contas sao visiveis
         E preencho title "Mrs."
@@ -311,7 +311,7 @@ Funcionalidade: criar login com sucesso
           E verifico que a pagina carrinho e visivel
           E clico em  checkout
           E clico em registrar
-          E preencho nome e email "Taise" "automacao@test.com.br"
+          E preencho nome e email "Taise" ""
           E clico em me cadastrar
           E verifco que as informacoes das contas sao visiveis
           E preencho title "Mrs."

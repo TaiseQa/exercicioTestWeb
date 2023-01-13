@@ -22,7 +22,7 @@ public class SignupLoginPage extends InteracaoWeb {
     private WebElement textoDeLOginVisivel;
 
     @FindBy(xpath = "(//input[@type='email'])[1]")
-    private WebElement emailLogin;
+    private WebElement  emailLogin;
 
     @FindBy(css = "[data-qa='login-password']")
     private WebElement senha;
@@ -45,9 +45,11 @@ public class SignupLoginPage extends InteracaoWeb {
     @FindBy(css="[data-qa='login-password']")
     private WebElement senhaLogin;
 
+
+
     public void preenchoNomeEEmail(String name, String textoemail) {
         escrever(nome, name);
-        escrever(email, textoemail);
+        escrever(email, getSaltString());
     }
 
     public void clicoEmMeCadastrar() {
@@ -91,5 +93,8 @@ public class SignupLoginPage extends InteracaoWeb {
     public void clicoEmFazerLogin() {
         clicarbotao(login);
     }
-
+    public void preenchoNomeEEmailCorreto(String name, String emailCadastro) {
+        escrever(nome,name);
+        escrever(email,emailCadastro);
+    }
 }

@@ -29,8 +29,10 @@ public class HomePage extends InteracaoWeb {
 
     public void queAcessoONavegador(String url) {
         getDriver().get(url);
+        esperar(1000);
         ArrayList<String> tabs2 = new ArrayList<String> (getDriver().getWindowHandles());
         getDriver().switchTo().window(tabs2.get(1));
+        esperar(1000);
         getDriver().close();
         getDriver().switchTo().window(tabs2.get(0));
     }

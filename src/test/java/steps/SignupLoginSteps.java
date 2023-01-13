@@ -66,6 +66,9 @@ public class SignupLoginSteps {
     public void verificoComTextoUsuarioExistente(String texto) {
         Assert.assertEquals(texto, signupLoginPage.verificoComTextoUsuarioExistente());
     }
-
+    @E("preencho nome e email correto {string} {string}")
+    public void preenchoNomeEEmailCorreto(String nome, String email) {
+        signupLoginPage.preenchoNomeEEmailCorreto(nome,email);
+    }
 
 }
