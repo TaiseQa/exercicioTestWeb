@@ -21,7 +21,7 @@ public class Hooks {
             TakesScreenshot ts = (TakesScreenshot) getDriver();
 
             byte[] src = ts.getScreenshotAs(OutputType.BYTES);
-            scenario.embed(src,"image.png", "Print Da Falha");
+            scenario.embed(src,"image/png", "Print Da Falha ");
         }
         matarDriver();
 

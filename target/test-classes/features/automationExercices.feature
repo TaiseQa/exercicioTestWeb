@@ -32,7 +32,7 @@ Funcionalidade: criar login com sucesso
     E clico em continuar
     E valido nome logado é visivel
     E clico em excluir conta
-    Entao valido que a conta foi excluida "ACCOUNT DELETED!"
+    Entao valido que a conta foi excluida "ACCOUNT DELETED!s"
 
 
   @ct01

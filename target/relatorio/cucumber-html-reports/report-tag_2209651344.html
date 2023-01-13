@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>13 Jan 2023, 14:55</td>
+      <td>13 Jan 2023, 15:10</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@ct11</td>
-          <td      class="passed"    >6</td>
           <td >0</td>
           <td >0</td>
+          <td     class="skipped"   >6</td>
           <td >0</td>
           <td >0</td>
           <td class="total">6</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="3608000000">3.608</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="0">0.000</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -182,12 +182,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.608</span>
+  <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Cenario</span>
   <span class="name">verificar quantidade no carrinho</span>
 
@@ -198,7 +198,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
@@ -220,7 +220,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">hooks.Hooks.iniciarNavegador()</span>
 
-  <span class="lead-duration duration">2.805</span>
+  <span class="lead-duration duration">2.980</span>
 
           </div>
 
@@ -237,9 +237,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -249,15 +249,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-E passed">
+<div class="brief step-name-E skipped">
   <span class="keyword indention">E</span>
   <span class="name">clico em visualizar detalhes do produto</span>
 
-  <span class="lead-duration duration">0.857</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -280,11 +280,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-E passed">
+<div class="brief step-name-E skipped">
   <span class="keyword indention">E</span>
   <span class="name">verifico visualicao do detalhes</span>
 
-  <span class="lead-duration duration">0.016</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -307,11 +307,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-E passed">
+<div class="brief step-name-E skipped">
   <span class="keyword indention">E</span>
   <span class="name">preencho quantidade <span class="argument">&quot;4&quot;</span></span>
 
-  <span class="lead-duration duration">0.147</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -334,11 +334,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-E passed">
+<div class="brief step-name-E skipped">
   <span class="keyword indention">E</span>
   <span class="name">clico em adicionar produto</span>
 
-  <span class="lead-duration duration">0.107</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -361,11 +361,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-E passed">
+<div class="brief step-name-E skipped">
   <span class="keyword indention">E</span>
   <span class="name">clico em visualizar carrinho</span>
 
-  <span class="lead-duration duration">2.416</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -388,11 +388,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Entao passed">
+<div class="brief step-name-Entao skipped">
   <span class="keyword indention">Entao</span>
   <span class="name">verifico a quantidade e <span class="argument">&quot;4&quot;</span></span>
 
-  <span class="lead-duration duration">0.065</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -437,7 +437,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">hooks.Hooks.fecharNavegador(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.926</span>
+  <span class="lead-duration duration">0.937</span>
 
           </div>
 
@@ -446,6 +446,19 @@ $(document).ready(function() {
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-5" class="collapsable-control">
+      <a>Print Da Falha</a>
+      <a href="embeddings/embedding_2081459495.unknown" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-5" class="collapse collapsable-details ">
+        <pre class="embedding-content">This file cannot be displayed. Use download button to get the content as file.</pre>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
